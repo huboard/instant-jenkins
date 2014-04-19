@@ -1,0 +1,25 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    darin/zypprepo (1.0.1)
+    puppetlabs/apt (1.4.2)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/firewall (1.0.2)
+    puppetlabs/java (1.1.0)
+      puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/ntp (3.0.3)
+      puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/stdlib (4.1.0)
+    rtyler/jenkins (1.0.1)
+      darin/zypprepo (>= 1.0.1)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/java (>= 1.0.1)
+      puppetlabs/stdlib (>= 2.0.0)
+
+DEPENDENCIES
+  puppetlabs/apt (>= 0)
+  puppetlabs/firewall (>= 0)
+  puppetlabs/ntp (>= 0)
+  puppetlabs/stdlib (>= 0)
+  rtyler/jenkins (>= 0)
+
