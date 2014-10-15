@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
       aws.secret_access_key = secret_access_key
       aws.keypair_name = keypair
       aws.security_groups = ['instant-jenkins']
+      aws.instance_type = "t2.small"
 
       # Ensuring that our machines hostname is "correct" so Puppet will apply
       # the right resources to it
