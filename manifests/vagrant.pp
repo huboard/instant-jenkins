@@ -1,6 +1,7 @@
 node default {
   include stdlib
   include firewall
+  include jenkins_config
 
   notice("Hello from ${hostname}")
 
@@ -31,12 +32,23 @@ node default {
 }
 
 node /^.*jenkinsmaster$/ inherits default {
+  apt::source { 'puppetlabs':
+    location   => 'http://apt.puppetlabs.com',
+               repos      => 'main',
+               key        => '4BD6EC30',
+               key_server => 'pgp.mit.edu',
+  }
   class {
     'apt':
       always_apt_update => true;
 
     'jenkins':
-        configure_firewall => false;
+      configure_firewall => false;
+  }
+
+  jenkins::plugin {
+    'copyartifact':;
+    's3':;
   }
 
   Package {

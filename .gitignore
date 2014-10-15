@@ -5,3 +5,5 @@
 .librarian
 .tmp
 modules/
+
+*.pem
