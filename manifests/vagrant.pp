@@ -1,7 +1,6 @@
 node default {
   include stdlib
   include firewall
-  include jenkins_config
 
   notice("Hello from ${hostname}")
 
@@ -45,6 +44,9 @@ node /^.*jenkinsmaster$/ inherits default {
     'jenkins':
       configure_firewall => false;
   }
+
+  include jenkins_config::jenkins::plugin::git
+  include jenkins_config::jenkins::plugin::rbenv
 
   jenkins::plugin {
     'copyartifact':;

@@ -2,6 +2,9 @@
 :backends:
   - yaml
 :hierarchy:
+  - "git"
   - "common"
 :yaml:
   :datadir: '/vagrant/hiera'
+:merge_behavior: 
+  - deeper

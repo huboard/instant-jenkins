@@ -7,3 +7,5 @@
 modules/
 
 *.pem
+*.pub
+known_hosts
