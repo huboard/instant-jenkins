@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read -s password
+
+for file in ./hiera/*.gpg; do
+  echo "DECRYPTING $file"
+  gpg --passphrase=$password $file
+done
