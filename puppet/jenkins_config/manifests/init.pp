@@ -58,7 +58,6 @@ class jenkins_config {
       'libreadline6-dev': ensure => latest;
       'zlib1g-dev': ensure => latest;
       'libncurses5-dev': ensure => latest;
-      'libpq-dev': ensure => latest;
     }
   }
 
