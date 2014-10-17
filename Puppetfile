@@ -9,3 +9,4 @@ mod 'puppetlabs/ntp'
 mod 'puppetlabs/firewall'
 
 mod 'rtyler/jenkins'
+mod 'puppetlabs/postgresql'
